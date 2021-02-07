@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body * {
+    /*
+     * Don't want to set `display: block;` on anything outside of the body
+     * we don't even really want to set disply block on eveyrhint... it is just
+     * here as a reminder
+     * */
+    display: block;
+}
