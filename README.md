@@ -1,3 +1,8 @@
+# Making Fireworks using the canvas...
+[Followed the tutorial here...](https://www.youtube.com/watch?v=R_CnWF3a_ks)
+
+
+
 # Starter project for canvas development using typescript and scss
 
 To run the project in development
