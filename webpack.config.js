@@ -31,6 +31,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'webpack-typescript-scss-starter',
             template: './src/page-templates/index.html',
+            // this line stopped the console from loggin twice?
+            // Don't actually know what it is doing though
+            inject: false,
         }),
     ],
     devServer: {
