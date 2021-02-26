@@ -6,7 +6,12 @@ export function randomColor(colors: string[]): string {
     return colors[Math.floor(Math.random() * colors.length)];
 }
 
-export function distance(x1: number, y1: number, x2: number, y2: number): number {
+export function distance(
+    x1: number,
+    y1: number,
+    x2: number,
+    y2: number,
+): number {
     const xDist = x2 - x1;
     const yDist = y2 - y1;
 
