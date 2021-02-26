@@ -4,6 +4,7 @@
     "description": "starter template for a browser project using webpack to compile typescript and scss",
     "main": "./build/index.js",
     "scripts": {
+        "postinstall": "husky install",
         "dev": "webpack serve",
         "build": "webpack",
         "type-check": "tsc --pretty --noEmit",
@@ -13,20 +14,9 @@
         "format:check": "npm run prettier -- --list-different",
         "validate:run-all": "npm-run-all --parallel type-check format:check lint build",
         "validate": "npm run type-check && npm run format:check && npm run lint && npm run build",
+        "lint-staged": "./node_modules/lint-staged/bin/lint-staged",
         "test": "jest",
         "test:all": "echo \"Error: no test specified\" && exit 1"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged",
-            "pre-push": "npm run type-check"
-        }
-    },
-    "lint-staged": {
-        "*.@(ts|tsx|js|jsx|json)": [
-            "npm run lint",
-            "npm run format"
-        ]
     },
     "keywords": [],
     "author": "",
