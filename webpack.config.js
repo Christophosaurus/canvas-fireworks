@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const mode = process.env.NODE_ENV ? process.env.NODE_ENV : 'development'
+const mode = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
 
 module.exports = {
     mode,
@@ -16,8 +16,8 @@ module.exports = {
             {
                 test: /\.(scss|css)$/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
-            }
-        ]
+            },
+        ],
     },
     resolve: {
         extensions: ['.ts', '.js'],
@@ -45,7 +45,6 @@ module.exports = {
         },
         contentBase: path.join(__dirname, './build'),
         compress: true,
-        port: 42069
-    }
+        port: 42069,
+    },
 };
-

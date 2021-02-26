@@ -1,13 +1,20 @@
 {
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaVersion": 2019,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": ["@typescript-eslint/eslint-plugin"],
     "extends": [
         "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        // Uncomment the following lines to enable eslint-config-prettier
-        // Is not enabled right now to avoid issues with the Next.js repo
-        "prettier",
-        "prettier/@typescript-eslint"
+        "eslint-config-prettier",
+        "eslint-config-prettier/@typescript-eslint"
     ],
     "env": {
         "es6": true,
@@ -16,11 +23,12 @@
         "node": true
     },
     "rules": {
+        "strict": ["error", "never"],
         "@typescript-eslint/explicit-function-return-type": 0,
         "@typescript-eslint/explicit-member-accessibility": 0,
         "@typescript-eslint/indent": 0,
-        "@typescript-eslint/member-delimiter-style": 0,
-        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/member-delimiter-style": 2,
+        "@typescript-eslint/no-explicit-any": 2,
         "@typescript-eslint/no-var-requires": 0,
         "@typescript-eslint/no-use-before-define": 0,
         "@typescript-eslint/no-unused-vars": [
@@ -37,4 +45,3 @@
         ]
     }
 }
-
