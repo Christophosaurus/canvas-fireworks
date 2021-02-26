@@ -122,7 +122,7 @@ import './styles/main.scss';
         for (let i = 0; i < PARTICLE_COUNT; i++) {
             particles.push(
                 new Particle(
-                    context!,
+                    context,
                     mouse.x,
                     mouse.y,
                     MIN_FIREWORK_RADIUS,
